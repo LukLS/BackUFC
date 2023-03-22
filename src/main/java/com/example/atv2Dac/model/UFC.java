@@ -38,4 +38,32 @@ public class UFC {
         this.lutaPreliminar = lutaPreliminar;
     }
 
+	public Long getEdicao() {
+		return edicao;
+	}
+
+	public void setEdicao(Long edicao) {
+		this.edicao = edicao;
+	}
+
+	public List<Lutador> getLutaPrincipal() {
+		return lutaPrincipal;
+	}
+
+	public void setLutaPrincipal(List<Lutador> lutaPrincipal) {
+		this.lutaPrincipal = lutaPrincipal;
+	}
+
+	public List<Lutador> getLutaPreliminar() {
+		return lutaPreliminar;
+	}
+
+	public void setLutaPreliminar(List<Lutador> lutaPreliminar) {
+		this.lutaPreliminar = lutaPreliminar;
+	}
+
+    public UFC() {
+    	
+    }
+    
 }

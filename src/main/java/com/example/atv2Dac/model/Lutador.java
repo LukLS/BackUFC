@@ -27,4 +27,26 @@ public class Lutador {
         this.cartel = cartel;
     }
 
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCartel() {
+		return cartel;
+	}
+
+	public void setCartel(String cartel) {
+		this.cartel = cartel;
+	}
+
+	public Lutador() {
+		
+	}
+    
+    
+
 }
