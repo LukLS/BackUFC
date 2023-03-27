@@ -14,8 +14,8 @@ public class UFCController {
     @Autowired
     private UFCservice ufcservice;
 
-    public void save(Long edicao, List<Lutador> lutadoresPrincipal, List<Lutador> lutadoresPreliminar){
-        ufcservice.save(edicao, lutadoresPrincipal, lutadoresPreliminar);
+    public void save(Long edicao, List<Lutador> lutadoresPrincipal){
+        ufcservice.save(edicao, lutadoresPrincipal);
     }
 
     public List<UFC> getUFC(){
@@ -25,8 +25,8 @@ public class UFCController {
         return ufcservice.busca(id);
     }
 
-    public void update(Long id,Long edicao, List<Lutador> lutadoresPrincipal, List<Lutador> lutadoresPreliminar){
-        ufcservice.update(id, edicao,lutadoresPrincipal, lutadoresPreliminar);
+    public void update(Long id,Long edicao, List<Lutador> lutadoresPrincipal){
+        ufcservice.update(id, edicao,lutadoresPrincipal);
     }
 
     public void delete(Long id){

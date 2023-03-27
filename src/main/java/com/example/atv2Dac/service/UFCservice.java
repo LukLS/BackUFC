@@ -25,12 +25,11 @@ public class UFCservice {
        return optional.get();
     }
 
-    public void save(Long edicao, List<Lutador> lutadoresPrincipal, List<Lutador> lutadoresPreliminar) {
+    public void save(Long edicao, List<Lutador> lutadoresPrincipal) {
         UFC ufc = new UFC();
         if (ufc != null) {
             ufc.setEdicao(edicao);
             ufc.setLutaPrincipal(lutadoresPrincipal);
-            ufc.setLutaPreliminar(lutadoresPreliminar);
             UFCdao.save(ufc);
         } else {
             throw new RuntimeException("Não foi possível salvar o registro");
@@ -38,14 +37,13 @@ public class UFCservice {
         }
     }
 
-    public void update(Long id,Long edicao, List<Lutador> lutadoresPrincipal, List<Lutador> lutadoresPreliminar) {
+    public void update(Long id,Long edicao, List<Lutador> lutadoresPrincipal) {
 
         Optional<UFC> optional = UFCdao.findById(id);
         if (optional.isPresent()) {
             UFC db = optional.get();
             db.setEdicao(edicao);
             db.setLutaPrincipal(lutadoresPrincipal);
-            db.setLutaPreliminar(lutadoresPreliminar);
             UFCdao.save(db);
         } else {
             throw new RuntimeException("Não foi possível atualizar o registro");

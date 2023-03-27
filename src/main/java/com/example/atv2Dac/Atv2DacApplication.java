@@ -62,14 +62,7 @@ public class Atv2DacApplication implements CommandLineRunner {
 			    idLutador = Long.parseLong(leitor.nextLine());
 				principal.add(lutadorController.getLutador(idLutador));
 
-				System.out.println("Selecione o id dos 2 jogadores da Luta principal");
-				idLutador = Long.parseLong(leitor.nextLine());
-				List<Lutador> preliminar = new ArrayList<>();
-				preliminar.add(lutadorController.getLutador(idLutador));
-				System.out.println("Selecione o id dos 2 jogadores da Luta principal");
-				idLutador = Long.parseLong(leitor.nextLine());
-				preliminar.add(lutadorController.getLutador(idLutador));
-				ufcController.save(edicao,principal,preliminar);
+				ufcController.save(edicao,principal);
 			}
 			else if(opcao == 2){
 				List<UFC> list = ufcController.getUFC();
@@ -105,7 +98,7 @@ public class Atv2DacApplication implements CommandLineRunner {
 				idLutador = Long.parseLong(leitor.nextLine());
 				preliminar.add(lutadorController.getLutador(idLutador));
 
-				ufcController.update(id,edicao, principal, preliminar);
+				ufcController.update(id,edicao, principal);
 			}
 			else if(opcao == 5){
 				System.out.println("Qual o id do UFC a ser Deletado? ");
