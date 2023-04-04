@@ -28,6 +28,7 @@ public class Atv2DacApplication implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 
+		/*
 		Scanner leitor = new Scanner(System.in);
 
 		String menu = "\n1- Adicionar nova Edição do UFC"
@@ -139,6 +140,8 @@ public class Atv2DacApplication implements CommandLineRunner {
 			}
 
 		}
+
+		 */
 
 	}
 }
